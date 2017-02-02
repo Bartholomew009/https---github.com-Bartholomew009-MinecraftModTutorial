@@ -2,6 +2,9 @@ package net.bartholome009.tutorial;
 
 import java.util.Random;
 
+import net.bartholome009.tutorial.init.ModItems;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -42,4 +45,12 @@ public class Tutorial {
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 	}
+	 public static CreativeTabs tabTutorial = new CreativeTabs(Tutorial.RESOURCE_PREFIX + "creative_tab") {
+
+		    @Override
+		    public ItemStack getTabIconItem() {
+
+		      return new ItemStack(ModItems.tutorialItem);
+		    }
+	 };
 }

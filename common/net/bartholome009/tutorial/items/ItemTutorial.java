@@ -14,7 +14,8 @@ public class ItemTutorial extends Item {
 	
 	@Override
 	 public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-		player.sendMessage(new TextComponentString("You used my item!"));
+		if (!world.isRemote)
+			player.sendMessage(new TextComponentString("You used my item!"));
 		return super.onItemRightClick(world, player, hand);
 	}
 	

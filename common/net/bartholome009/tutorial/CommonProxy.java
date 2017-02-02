@@ -12,9 +12,9 @@ public class CommonProxy {
 	}
 	
 	public void Init(FMLInitializationEvent event) {
-		ModItems.InitClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
+		
 	}
 	public void postInit(FMLPostInitializationEvent event) {
-	
+		
 	}
 }
